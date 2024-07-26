@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,20 +7,21 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
-  private mobileNavToggleBtn: HTMLElement | null = null;
 
-  ngOnInit() {
-    this.mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-    if (this.mobileNavToggleBtn) {
-      this.mobileNavToggleBtn.addEventListener('click', this.mobileNavToggle.bind(this));
-    }
+
+export class NavbarComponent implements AfterViewInit {
+  //@ts-ignore
+  @ViewChild('mobileNavToggle') mobileNavToggleBtn: ElementRef;
+
+  ngAfterViewInit() {
+    this.mobileNavToggleBtn.nativeElement.addEventListener('click', this.mobileNavToggle.bind(this));
   }
 
-  private mobileNavToggle(): void {
-    document.querySelector('body')?.classList.toggle('mobile-nav-active');
-    this.mobileNavToggleBtn?.classList.toggle('bi-list');
-    this.mobileNavToggleBtn?.classList.toggle('bi-x');
+  mobileNavToggle() {
+    document.body.classList.toggle('mobile-nav-active');
+    this.mobileNavToggleBtn.nativeElement.classList.toggle('bi-list');
+    this.mobileNavToggleBtn.nativeElement.classList.toggle('bi-x');
   }
 }
+
 

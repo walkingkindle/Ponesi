@@ -194,33 +194,7 @@
         </div>
 
         <div class="col-lg-8">
-          <div class="swiper init-swiper-tabs">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoHeight": true,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 40
-                  },
-                  "1200": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 1
-                  }
-                }
-              }
-            </script>
+          <div #swiperElement class="swiper init-swiper-tabs">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="assets/img/register-ponesi.jpg" alt="Ponesi aplikacija" class="img-fluid">
@@ -403,7 +377,7 @@
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center">
         <div class="col-lg-7">
-          <div class="swiper init-swiper">
+          <div #swiperElement class="swiper init-swiper">
             <script type="application/json" class="swiper-config">
               {
                 "loop": true,
