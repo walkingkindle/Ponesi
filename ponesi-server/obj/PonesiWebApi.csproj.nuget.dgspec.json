@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ponesi\\PonesiWebApi\\PonesiWebApi.csproj": {}
+    "C:\\ponesiMain\\ponesi-server\\PonesiWebApi.csproj": {}
   },
   "projects": {
-    "C:\\ponesi\\PonesiWebApi\\PonesiWebApi.csproj": {
+    "C:\\ponesiMain\\ponesi-server\\PonesiWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ponesi\\PonesiWebApi\\PonesiWebApi.csproj",
+        "projectUniqueName": "C:\\ponesiMain\\ponesi-server\\PonesiWebApi.csproj",
         "projectName": "PonesiWebApi",
-        "projectPath": "C:\\ponesi\\PonesiWebApi\\PonesiWebApi.csproj",
+        "projectPath": "C:\\ponesiMain\\ponesi-server\\PonesiWebApi.csproj",
         "packagesPath": "C:\\Users\\akiha\\.nuget\\packages\\",
-        "outputPath": "C:\\ponesi\\PonesiWebApi\\obj\\",
+        "outputPath": "C:\\ponesiMain\\ponesi-server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,11 +39,56 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.7.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

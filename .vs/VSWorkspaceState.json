@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\angular",
+    "\\ponesi-server",
+    "\\ponesi-server\\Controllers",
+    "\\ponesi-server\\Models"
   ],
   "PreviewInSolutionExplorer": false
 }
