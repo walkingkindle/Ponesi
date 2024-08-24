@@ -6,5 +6,9 @@ namespace PonesiWebApi.Interfaces
     public interface IUserService
     {
         Task<Result> CreateUserAsync(AddNewUserDto newUserDto);
+
+        Task<User> GetUserByIdAsync(int userId);
+
+        Task<Result> AuthenticateUser(UserAuthenticationDto userAuthenticationDto);
     }
 }

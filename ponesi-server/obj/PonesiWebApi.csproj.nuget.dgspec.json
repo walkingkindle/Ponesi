@@ -50,6 +50,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "EmailValidation": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
             "EntityFramework": {
               "target": "Package",
               "version": "[6.5.1, )"

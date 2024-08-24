@@ -39,6 +39,8 @@ namespace PonesiWebApi
 
             services.AddTransient<IUserService, UserService>();
 
+            services.AddTransient<IPasswordHasher, PasswordHasher>();
+
             
         }
 
