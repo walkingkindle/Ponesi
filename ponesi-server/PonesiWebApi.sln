@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PonesiWebApi", "PonesiWebApi.csproj", "{F45509E9-EC7A-45AB-8AAE-D3038CA9C937}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PonesiTests", "..\PonesiTests\PonesiTests.csproj", "{87AF57C6-F3BE-4EDD-BE78-A2E328A8387E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F45509E9-EC7A-45AB-8AAE-D3038CA9C937}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F45509E9-EC7A-45AB-8AAE-D3038CA9C937}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F45509E9-EC7A-45AB-8AAE-D3038CA9C937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87AF57C6-F3BE-4EDD-BE78-A2E328A8387E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87AF57C6-F3BE-4EDD-BE78-A2E328A8387E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87AF57C6-F3BE-4EDD-BE78-A2E328A8387E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87AF57C6-F3BE-4EDD-BE78-A2E328A8387E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

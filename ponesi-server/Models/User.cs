@@ -1,3 +1,5 @@
+using System.Security.Claims;
+
 namespace PonesiWebApi.Models;
 
 public class User
@@ -11,6 +13,7 @@ public class User
    public string  PasswordHash { get; set; }
 
    public string Username { get; set; } 
+
     
 
 

@@ -9,6 +9,6 @@ namespace PonesiWebApi.Interfaces
 
         Task<User> GetUserByIdAsync(int userId);
 
-        Task<Result> AuthenticateUser(UserAuthenticationDto userAuthenticationDto);
+        Task<Result<string>> AuthenticateUser(UserAuthenticationDto userAuthenticationDto);
     }
 }

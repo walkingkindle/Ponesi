@@ -11,30 +11,33 @@ namespace PonesiWebApi.Services
         private readonly AppDbContext _context;
         private readonly ICustomDtoMapper _mapper;
         private readonly IPasswordHasher _hasher;
+        private readonly IAuthenticationService _authenticationService;
 
-        public UserService(AppDbContext context, ICustomDtoMapper mapper,IPasswordHasher hasher)
+        public UserService(AppDbContext context, ICustomDtoMapper mapper,IPasswordHasher hasher,IAuthenticationService authenticationService)
         {
             _context = context;
             _mapper = mapper;
             _hasher = hasher;
+            _authenticationService = authenticationService;
         }
 
-        public async Task<Result> AuthenticateUser(UserAuthenticationDto userAuthenticationDto)
+        public async Task<Result<string>> AuthenticateUser(UserAuthenticationDto userAuthenticationDto)
         {
             var user = await GetUserByEmailAsync(userAuthenticationDto.Email);
 
             if(user == null)
             {
-                return Result.Failure(UserErrors.NullUser);
+                return Result<string>.Failure(UserErrors.NullUser);
             }
 
             if(!_hasher.Verify(userAuthenticationDto.Password, user.PasswordHash))
             {
-                return Result.Failure(UserErrors.WrongCredentials);
+                return Result<string>.Failure(UserErrors.WrongCredentials);
             }
 
-            //jwt????
-            return Result.Success();
+            var jsonWebTokenResult = _authenticationService.GenerateJwtToken(user);
+
+            return Result<string>.Success(jsonWebTokenResult.Value);
 
         }
 

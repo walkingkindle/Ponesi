@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PonesiWebApi.FunctionalResult;
 using PonesiWebApi.Interfaces;
 using PonesiWebApi.Models;
@@ -6,6 +7,7 @@ using PonesiWebApi.Models;
 namespace PonesiWebApi.Controllers
 {
 
+    [Authorize]
     [Route("api/[controller]")]
     public class UserController:ControllerBase    {
         private readonly IUserService _userService;
@@ -16,6 +18,7 @@ namespace PonesiWebApi.Controllers
         }
 
 
+        [AllowAnonymous]
         [HttpPost("register")]
         public async Task<IResult> CreateNewUser(AddNewUserDto newUserDto)
         {
@@ -28,14 +31,14 @@ namespace PonesiWebApi.Controllers
 
         }
 
-
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IResult> LoginUser(UserAuthenticationDto userAuthDto)
         {
             var result = await _userService.AuthenticateUser(userAuthDto);
 
             return result.Match(
-                onSuccess: () => Results.NoContent(),
+                onSuccess: () => Results.Ok(result.Value),
                 onFailure: error => Results.BadRequest(result.Error));
         }
 
