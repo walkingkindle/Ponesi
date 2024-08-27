@@ -148,3 +148,4 @@ C:\ponesiMain\ponesi-server\obj\Debug\net8.0\PonesiWebApi.genruntimeconfig.cache
 C:\ponesiMain\ponesi-server\obj\Debug\net8.0\ref\PonesiWebApi.dll
 C:\ponesiMain\ponesi-server\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\ponesiMain\ponesi-server\bin\Debug\net8.0\EmailValidation.dll
+C:\ponesiMain\ponesi-server\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll

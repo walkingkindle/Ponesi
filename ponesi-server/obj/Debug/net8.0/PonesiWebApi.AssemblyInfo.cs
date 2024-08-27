@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PonesiWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c2b820f39bce941e3cc337c0e68e3c78c74b084")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+734816ff1f4dc893d9c9e4de0bbd7ec5475f0c8e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PonesiWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PonesiWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

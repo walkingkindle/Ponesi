@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using PonesiWebApi.FunctionalResult;
 using PonesiWebApi.Interfaces;
 using PonesiWebApi.Models;
+using BCrypt;
 
 namespace PonesiWebApi.Services
 {
@@ -37,6 +38,10 @@ namespace PonesiWebApi.Services
 
             var jsonWebTokenResult = _authenticationService.GenerateJwtToken(user);
 
+            if (jsonWebTokenResult.IsFailure)
+            {
+                return Result<string>.Failure(jsonWebTokenResult.Error);
+            }
             return Result<string>.Success(jsonWebTokenResult.Value);
 
         }
